@@ -47,7 +47,19 @@ namespace TunaFightersServer
             {
                 Console.WriteLine("Listening...");
                 TcpClient client = server.AcceptTcpClient();
-                Console.WriteLine("Connected");
+                NetworkStream stream = client.GetStream();
+                byte[] data = new byte[256];
+
+                // String to store the response ASCII representation.
+                String responseData = String.Empty;
+
+                // Read the first batch of the TcpServer response bytes.
+                Int32 bytes = stream.Read(data, 0, data.Length);
+                responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
+                Console.WriteLine("Received:" + responseData);
+
+                data = System.Text.Encoding.ASCII.GetBytes("success");
+                stream.Write(data, 0, data.Length);
             }
         }
     }       

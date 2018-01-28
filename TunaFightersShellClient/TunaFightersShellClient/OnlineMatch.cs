@@ -8,12 +8,15 @@ namespace TunaFightersShellClient
         public void Start()
         {
             Console.WriteLine("Conectandote al servidor...");
+            Console.WriteLine("Introduce direccion: ");
+            string dir = Console.ReadLine();
+            string ip = dir.Split(':')[0];
+            Int32 port = Convert.ToInt32(dir.Split(':')[1]);
 
             try
             {
                 string message = "newConnection;" + Program.USER_NAME;
-                Int32 port = 27015;
-                TcpClient client = new TcpClient("127.0.0.1", port);
+                TcpClient client = new TcpClient(ip, port);
 
                 // Translate the passed message into ASCII and store it as a Byte array.
                 Byte[] data = System.Text.Encoding.ASCII.GetBytes(message);

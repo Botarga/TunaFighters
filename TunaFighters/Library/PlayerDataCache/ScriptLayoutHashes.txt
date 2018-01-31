@@ -1,6 +1,7 @@
-Android
+WindowsStandalone
 SceneListBegin?
 Assets/Scenes/MenuScene.unity
+Assets/Scenes/TutorialScene.unity
 SceneListEnd?
 75cd0c6c744b9733ef29aa6c59ece2b1 Assembly-CSharp.dll:TMPro.Examples.VertexZoom
 c906602d9b43cc5e075f80e1d8ae7c79 Assembly-CSharp.dll:TMPro.Examples.Benchmark01_UGUI
@@ -140,6 +141,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 50a0fa002cfc67638c87a901e46b763e Assembly-CSharp.dll:TMPro.Examples.TMP_TextSelector_B
 020550babdb991365f61c5bffe1f4f52 Assembly-CSharp.dll:TMPro.Examples.Benchmark03
 b9332c0eee630779376843b5343eb250 Assembly-CSharp.dll:TMPro.Examples.TMP_TextInfoDebugTool
+7a49849f28aa874b29dcc0f52eb8921a Assembly-CSharp.dll:.DialogueManager
 f4bd1aee67eeef7953cce6c44588b3d7 TextMeshPro-2017.3-1.0.56-Runtime.dll:TMPro.TextContainer
 8e879b98cad4aa17a0beef746daecd35 TextMeshPro-2017.3-1.0.56-Runtime.dll:TMPro.TextMeshPro
 cdb4459900f4743ae0e8ca5a2c3a821a TextMeshPro-2017.3-1.0.56-Runtime.dll:TMPro.TextMeshProUGUI
@@ -160,6 +162,7 @@ e763036081c708b34f78f5a56f72c23d TextMeshPro-2017.3-1.0.56-Runtime.dll:TMPro.TMP
 d672cee35261f9935d5ce974c746730f TextMeshPro-2017.3-1.0.56-Runtime.dll:TMPro.TMP_Text
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.TMP_TextSelector_A
 b900ead596b2fb1093b31cb63a678767 Assembly-CSharp.dll:TMPro.Examples.TextMeshProFloatingText
+dd65926e72c90e830f7b3d0657a71c05 Assembly-CSharp.dll:.DialogueTrigger
 dad1c1272dfe1898bb613dcb2631bcce Assembly-CSharp.dll:TMPro.Examples.Benchmark02
 05524b8f659e7bfe5756d1335fec24ba TextMeshPro-2017.3-1.0.56-Editor.dll:TMPro.EditorUtilities.DropdownEditor
 05524b8f659e7bfe5756d1335fec24ba TextMeshPro-2017.3-1.0.56-Editor.dll:TMPro.EditorUtilities.TMP_ColorGradientEditor
@@ -224,3 +227,4 @@ afc52d27c3ec0bd47909e81bd45fbffa Assembly-CSharp.dll:TMPro.TMP_TextEventHandler
 af7666733efcc974926d7d470e1732a6 Assembly-CSharp.dll:TMPro.Examples.SkewTextExample
 34e025057ef78b1bf238460cdf6583a3 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.SimpleScript
+a9c7bcbd6aad91457367110c3b385f04 Assembly-CSharp.dll:.CustomerManager

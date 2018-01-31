@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour {
 
 	private Queue<string> sentences;
+	private DialogueTrigger src;
 	public Text nameText;
 	public Text dialogueText;
 
@@ -17,8 +18,9 @@ public class DialogueManager : MonoBehaviour {
 	}
 
 
-	public void StartDialogue(Dialogue dialogue){
+	public void StartDialogue(Dialogue dialogue, DialogueTrigger src){
 		nameText.text = dialogue.name;
+		this.src = src;
 		animator.SetBool ("IsOpen", true);
 
 		sentences.Clear ();
@@ -32,6 +34,7 @@ public class DialogueManager : MonoBehaviour {
 	public void DisplayNextSentence(){
 		if (sentences.Count == 0) {
 			EndDialogue ();
+			src.DialogueEnded ();
 			return;
 		}
 
@@ -47,6 +50,7 @@ public class DialogueManager : MonoBehaviour {
 			yield return null;
 		}
 	}
+
 	void EndDialogue(){
 		animator.SetBool ("IsOpen", false);
 	}

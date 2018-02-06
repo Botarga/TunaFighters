@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 222117580885257108}
   - component: {fileID: 114448909221317382}
   - component: {fileID: 114186999347399854}
+  - component: {fileID: 114485118639636532}
   m_Layer: 5
   m_Name: CardDrag_1
   m_TagString: Untagged
@@ -161,6 +162,25 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114485118639636532
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1363047915323704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1679637790, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: 101.26
+  m_PreferredHeight: 135.01
+  m_FlexibleWidth: 0
+  m_FlexibleHeight: 0
+  m_LayoutPriority: 1
 --- !u!222 &222117580885257108
 CanvasRenderer:
   m_ObjectHideFlags: 1

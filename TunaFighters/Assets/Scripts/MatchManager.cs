@@ -4,13 +4,28 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class MatchManager : MonoBehaviour {
+	public enum TurnPhases{
+		DRAW_PHASE, FLAME_SELECT_PHASE, FLAME_BATTLE_PHASE
+	};
+
 	Customer[] customers;
 	public Button customersButton;
 	public Image customersLetter;
+	public Image userDeck;
+	public bool user1Turn;
+	TurnPhases turnPhase; 
+
+	Card[] user1Deck, user2Deck;
+	private const int MAX_CARDS = 50;
 
 	// Use this for initialization
 	void Start () {
 		customers = new Customer[5];
+		user1Deck = new Card[MAX_CARDS];
+		user2Deck = new Card[MAX_CARDS];
+
+		turnPhase = TurnPhases.DRAW_PHASE;
+		user1Turn = true;
 		for (int i = 0; i < customers.Length; ++i)
 			customers [i] = new Customer ();
 		ModifyCustomer (0, true, Random.Range(1, 6) << 1);
@@ -18,7 +33,14 @@ public class MatchManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (user1Turn) {
+			if (turnPhase == TurnPhases.DRAW_PHASE) {
+				turnPhase = TurnPhases.FLAME_SELECT_PHASE;
+				Debug.Log ("Robas una carta");
+			}
+		} else {
+			
+		}
 	}
 
 	public void ModifyCustomer(int index, bool unlocked, int roastLevel, bool notify = true)
@@ -55,6 +77,10 @@ public class MatchManager : MonoBehaviour {
 			an.SetBool ("OpenCustomerLetter", !an.GetBool("OpenCustomerLetter"));
 	}
 
+	public void DisableUILetter()
+	{
+		userDeck.gameObject.SetActive (!userDeck.IsActive());
+	}
 
 }
 
@@ -62,4 +88,15 @@ class Customer
 {
 	public bool Unlocked{ get; set; }
 	public int RoastLevel{get;set;}
+}
+
+class Card
+{
+	public enum ItemType
+	{
+		SOJA, OIL, SESAME 
+	};
+
+	public ItemType Type { get; set;}
+	public int Flame{ get; set;}
 }

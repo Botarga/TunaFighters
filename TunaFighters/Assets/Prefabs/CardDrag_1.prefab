@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114448909221317382}
   - component: {fileID: 114186999347399854}
   - component: {fileID: 114485118639636532}
+  - component: {fileID: 225562685430865316}
   m_Layer: 5
   m_Name: CardDrag_1
   m_TagString: Untagged
@@ -108,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f4d0cf86a31fbb4dbd9ce25df8a24eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentToReturnTo: {fileID: 0}
 --- !u!114 &114224845342981180
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,7 +131,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 5910809bb85219d4181ee64dac53a8fe, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -255,3 +257,14 @@ RectTransform:
   m_AnchoredPosition: {x: -25.7, y: 26}
   m_SizeDelta: {x: 30.87, y: 24.42}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &225562685430865316
+CanvasGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1363047915323704}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
